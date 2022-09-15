@@ -1,0 +1,47 @@
+/* .over25{
+    background-color: white;
+} */
+.over{
+    background-image: url(../../../public/images/over.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+    margin-bottom: 20px;
+}
+.overlay{
+    background: rgba(39,62,84,0.82);
+    z-index: 2;
+    height: 100%;
+}
+/* .content{
+    padding-top: 350px; */
+/* } */
+.h1{
+    color: whitesmoke;
+    font-family: 'Montserrat';
+    font-size: 90px;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-top: 200px;
+}
+hr{
+    width: 450px;
+}  
+.intro{
+    padding: 30px;
+    color: whitesmoke;
+    font-size: 18px;
+    line-height: 2;  
+}
+.home-btn{
+    background: transparent;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    font-size: 18px;
+    margin: 30px;
+    padding: 20px 38px;
+}
+.home-btn:hover{
+    background: burlywood;
+    color: black;
+}

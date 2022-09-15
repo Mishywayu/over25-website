@@ -1,0 +1,30 @@
+.products{
+    background-image: url(../../../public/images/merchandise.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+    margin-bottom: 20px;
+}
+.overlay{
+    background: rgba(39,62,84,0.82);
+    z-index: 2;
+    height: 100%;
+}
+h2{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 40px;
+}
+.prod-hr{
+    color: black;
+    width: 250px;
+    margin-left: 42%;
+}
+#image1{
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.caption{
+    margin-bottom: 40px;
+}
+

@@ -1,0 +1,79 @@
+.heading{
+    font-family: 'Montserrat';
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+.about-hr{
+    width: 100%;
+    height: 50px;
+}
+.picture{
+    display: flex;
+    margin-left: 30px;
+} 
+.img {
+    width: 50%;
+    height: 520px;
+    float: left;
+    background-image: url(../../../public/images/lornzie1.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: contain;
+}
+.img1{
+    width: 50%;
+    height: 520px;
+    float: left;
+    background-image: url(../../../public/images/ivy1.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: contain;  
+}
+.img2{
+    width: 50%;
+    height: 520px;
+    float: left;
+    background-image: url(../../../public/images/jules1.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: contain;
+}
+.img3{
+    width: 50%;
+    height: 520px;
+    float: left;
+    background-image: url(../../../public/images/shikie2.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: contain;
+}
+.overlay1{
+    width: 40%;
+    width: 40%;
+    height: 70px;
+    background: rgba(39,62,84,0.82);
+    background: rgba(128,0,0,0.4);
+    float: right;
+    margin-top: 140px; 
+    margin-left: -75px;
+    padding-top: 20px;
+}
+.overlay1 h1{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.identity{
+    text-align: justify;
+    padding-top: 10px;
+}
+.identity p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.title{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    margin-bottom: 20px;
+}
