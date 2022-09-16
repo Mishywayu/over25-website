@@ -43,7 +43,7 @@ export default function Items() {
                         </Carousel>
                     </Col>
                     <Col>
-                        23
+                        
                     </Col>
                 </Row>
             </Container>
