@@ -20,7 +20,9 @@ export default function Products() {
             </div>
             <Items />
 
-            <Contact />
+            <footer>
+                <Contact />
+            </footer>
         </div>
     );
 }

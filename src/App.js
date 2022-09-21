@@ -1,22 +1,24 @@
-import './App.css';
-// import Home from './components/Home/Home';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home/Home';
 import Products from './components/Products/Products';
-// import Contact from './components/Contact/Contact';
-// import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import About from './components/About/About';
 // import Navbar from './components/Navbar/Navbar';
 // import ProductItems from './components/Products/ProductItems'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      {/* <Home /> */}
-      {/* <Navbar /> */}
-      {/* <About /> */}
-      {/* <Contact /> */}
-      <Products />
-      {/* <ProductItems /> */}
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="products" element={<Products />} />
+    <Route path="about" element={<About />} />
+    <Route path="contact" element={<Contact />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);

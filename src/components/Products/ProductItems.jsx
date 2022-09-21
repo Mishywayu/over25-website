@@ -1,12 +1,12 @@
 import React from "react";
 import './products.css';
 import { Container, Row, Col } from "react-bootstrap";
-
-import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 export default function Items() {
     return (
-        <div>
+        <div className="items-page">
             <h2>Our Products
                 <hr className="prod-hr" />
             </h2>
@@ -14,39 +14,61 @@ export default function Items() {
             <Container>
                 <Row>
                     <Col>
-                        <Carousel variant="dark">
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-60"
-                                    src="/images/item1.png"
-                                    alt="First slide"
-                                    id="image"
-                                />
-                                <div className="caption">
-                                    <h5 className="caption-h5">First slide label</h5>
-                                    <p className="caption-p">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </div>
-                            </Carousel.Item>
-
-                            <Carousel.Item>
-                                <img
-                                    className="d-block w-60"
-                                    src="/images/item2.png"
-                                    alt="Second slide"
-                                    id="image1"
-                                />
-                                <div className="caption">
-                                    <h5>Second slide label</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </Carousel.Item>
-                        </Carousel>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/images/item1.png" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="info">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
                     </Col>
                     <Col>
-                        
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/images/item6.png" className="item-2" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="info">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/images/item8.png" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="info">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src="/images/item4.png" className="item-3" />
+                            <Card.Body>
+                                <Card.Title>Card Title</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Button variant="info">Go somewhere</Button>
+                            </Card.Body>
+                        </Card>
                     </Col>
                 </Row>
             </Container>
+
+
         </div>
     );
 }

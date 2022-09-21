@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import Navbar from "../Navbar/Navbar";
@@ -19,7 +20,9 @@ export default function Home() {
                     Ted X Speakers - Parklands 2019<br/>
                     Bake Wards 2018 Winner</p>
 
-                    <button className="home-btn">Get started</button>
+                    <button className="home-btn">
+                        <Link to="/products" style={{textDecoration: 'none', color: 'white'}}>Get started</Link>
+                    </button>
                     {/* <div className="content">
                         <h1 className="h1">
                             Over 25
