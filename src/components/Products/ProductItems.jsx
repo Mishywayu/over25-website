@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './products.css';
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
@@ -22,7 +23,9 @@ export default function Items() {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="info">Go somewhere</Button>
+                                <Button variant="info">
+                                    <Link to="/hoodie">Shop now</Link>
+                                    </Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -35,7 +38,9 @@ export default function Items() {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="info">Go somewhere</Button>
+                                <Button variant="info">
+                                    <Link to="/sweatshirt">Get it</Link>
+                                </Button>
                             </Card.Body>
                         </Card>
                     </Col>

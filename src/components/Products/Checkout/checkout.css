@@ -1,0 +1,65 @@
+.counter {
+    width: 100%;
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+    row-gap: 20px;
+}
+.counter__output {
+    font-size: 40px;
+    color: burlywood;
+}
+.btn__container {
+    justify-content: center;
+    flex-direction: row;
+}
+.control__btn {
+    font-size: 30px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: burlywood;
+    border: 1px solid rgb(16, 0, 54);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.control__btn:hover {
+    background-color: burlywood;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.chechout-btn, .chechout-btn1{
+    background: burlywood;
+    border: 1px solid whitesmoke;
+    font-size: 18px;
+    margin: 30px;
+    padding: 20px 38px;
+}
+.chechout-btn:hover{
+    background: black;
+}
+.chechout-btn1:hover{
+    background: brown;
+}
+
+/* delivery method page */
+.delivery-method{
+    /* background-color: red; */
+    display: flex;
+    column-gap: 50px;
+    justify-content: center;
+}
+button{
+    /* margin: 10px 15px !important; */
+    padding: 10px 15px;
+    color: whitesmoke;
+    background: burlywood;
+    border-radius: 35px !important;
+    border: 1px solid burlywood;
+}
+button:hover{
+    background: whitesmoke;
+    color: black;
+}
