@@ -7,8 +7,8 @@ import About from './components/About/About';
 import Hoodie from "./components/Products/Checkout/Hoodie";
 import SweatShirt from "./components/Products/Checkout/SweatShirt";
 import Delivery from "./components/Products/Checkout/Delivey";
-// import Navbar from './components/Navbar/Navbar';
-// import ProductItems from './components/Products/ProductItems'
+import Ship from "./components/Products/Checkout/Ship";
+import PickUp from "./components/Products/Checkout/PickUp";
 
 export default function App() {
   return (
@@ -21,6 +21,8 @@ export default function App() {
     <Route path="hoodie" element={<Hoodie />} />
     <Route path="sweatshirt" element={<SweatShirt />} />
     <Route path="delivery" element={<Delivery />} />
+    <Route path="ship" element={<Ship />} />
+    < Route path="pickup" element={<PickUp />} />
     </Routes>
     </BrowserRouter>
   );

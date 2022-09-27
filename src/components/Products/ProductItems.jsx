@@ -15,7 +15,7 @@ export default function Items() {
             <Container>
                 <Row>
                     <Col>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{width: '60%'}}>
                             <Card.Img variant="top" src="/images/item1.png" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -25,12 +25,12 @@ export default function Items() {
                                 </Card.Text>
                                 <Button variant="info">
                                     <Link to="/hoodie">Shop now</Link>
-                                    </Button>
+                                </Button>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col>
-                        <Card style={{ width: '18rem' }}>
+                        <Card style={{ width: '60%' }}>
                             <Card.Img variant="top" src="/images/item6.png" className="item-2" />
                             <Card.Body>
                                 <Card.Title>Card Title</Card.Title>
@@ -41,32 +41,6 @@ export default function Items() {
                                 <Button variant="info">
                                     <Link to="/sweatshirt">Get it</Link>
                                 </Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="/images/item8.png" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="info">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="/images/item4.png" className="item-3" />
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="info">Go somewhere</Button>
                             </Card.Body>
                         </Card>
                     </Col>

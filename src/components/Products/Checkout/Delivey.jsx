@@ -1,34 +1,41 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+// import { Link } from "react-router-dom";
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
 import './checkout.css';
 import Card from 'react-bootstrap/Card';
 
-import Deliver from "./Deliver";
+import Ship from "./Ship";
 import PickUp from "./PickUp";
 
-export default function Delivery(){
+export default function Delivery() {
     const [selected, setSelected] = useState("deliver");
     const showCard = () => {
-        if (selected === "deliver") {
-            return <Deliver />
+        if (selected === "ship") {
+            return <Ship />
         }
         else if (selected === "pickup") {
             return <PickUp />
         }
     }
-    return(
+    const showDiv = () => {
+        document.getElementById("show").style.display = showCard();
+    }
+    return (
         <Container>
             <Row>
                 <Col>
-                <Card style={{ marginTop: '50px' }}>
+                    <Card style={{ marginTop: '50px' }}>
                         <Card.Header as="h5">Delivery method</Card.Header>
                         <Card.Body>
-                        <div className="delivery-method">
-                            <button onClick={() => setSelected("deliver")}><LocalShippingIcon /> Delivered</button>
-                            <button onClick={() => setSelected("pickup")}><StoreMallDirectoryIcon /> Pick up</button>
-                        </div>
+                            <div className="delivery-method">
+                                <button className="delivery-btn" onClick={() => setSelected("ship")}><LocalShippingIcon />Ship</button>
+                                <button className="delivery-btn" onClick={() => setSelected("pickup")}><StoreMallDirectoryIcon />Pick Up</button>
+                            </div>
+                            <div id="show" style={{ width: '50%' }}>
+                                {showCard}
+                            </div>
                         </Card.Body>
                     </Card>
                 </Col>
