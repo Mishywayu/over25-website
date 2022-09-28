@@ -67,5 +67,17 @@
 }
 
 .delivery-btn:hover {
-    background: brown;
+    background: brown
+}
+.delivery-btns{
+    margin-top: 40px;
+}
+.btn{
+    float: right;
+    padding: 10px 15px !important;
+    border: 1px solid burlywood !important;
+    background-color: burlywood !important;
+}
+.btn:hover{
+    background-color: brown !important;
 }

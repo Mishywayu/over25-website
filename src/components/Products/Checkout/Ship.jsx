@@ -3,12 +3,9 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 
 export default function Ship() {
     return (
-        <Container>
-            <Row>
-                <Col>
                     <div>
                         <h4>Shipping Address</h4>
-                        <Form>
+                        <Form style={{height: '370px'}}>
                             <div>
                                 <Form.Label>County/Region</Form.Label>
                                 <Form.Select aria-label="Default select example">
@@ -52,8 +49,5 @@ export default function Ship() {
                             </div>
                         </Form>
                     </div>
-                </Col>
-            </Row>
-        </Container>
     );
 }

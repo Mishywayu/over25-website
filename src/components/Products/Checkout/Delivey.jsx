@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
 import './checkout.css';
@@ -8,20 +8,27 @@ import Card from 'react-bootstrap/Card';
 
 import Ship from "./Ship";
 import PickUp from "./PickUp";
+import Payment from "./Payment";
+import Hoodie from "./Hoodie";
 
 export default function Delivery() {
-    const [selected, setSelected] = useState("deliver");
+    const [selected, setSelected] = useState("ship");
     const showCard = () => {
         if (selected === "ship") {
             return <Ship />
         }
-        else if (selected === "pickup") {
+       else if (selected === "pickup") {
             return <PickUp />
         }
     }
-    const showDiv = () => {
-        document.getElementById("show").style.display = showCard();
-    }
+    // const changeHeight = () => {
+    //     if (selected === "ship") {
+    //         document.getElementById('show').style.height = '423px';
+    //     }
+    //     else if (selected === "pickup") {
+    //         document.getElementById('show').style.height = '100px';
+    //     }
+    // }
     return (
         <Container>
             <Row>
@@ -33,8 +40,15 @@ export default function Delivery() {
                                 <button className="delivery-btn" onClick={() => setSelected("ship")}><LocalShippingIcon />Ship</button>
                                 <button className="delivery-btn" onClick={() => setSelected("pickup")}><StoreMallDirectoryIcon />Pick Up</button>
                             </div>
-                            <div id="show" style={{ width: '50%' }}>
-                                {showCard}
+
+                            <div id="show">
+                                {showCard() }
+                                {/* {changeHeight()} */}
+                            </div>
+
+                            <div className="delivery-btns">
+                                <button className="btn btn1"><Link to="/payment" style={{color: 'white', textDecoration: 'none'}}>Proceed to payment</Link></button>
+                                <button className="btn" style={{marginRight: '30px'}}><Link to="/hoodie" style={{color: 'white', textDecoration: 'none'}}>Back</Link></button>
                             </div>
                         </Card.Body>
                     </Card>
