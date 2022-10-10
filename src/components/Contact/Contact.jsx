@@ -8,8 +8,56 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { response } from 'express';
 
 export default function Contact() {
+
+    const AddFeedback = () => {
+        const initialFeedbackState = {
+            id: null,
+            fullname: "",
+            email: "",
+            phone: "",
+            message: "",
+        };
+        const [feedback, setFeedback] = useState(initialFeedbackState);
+        // const [submitted, setSubitted] = useState(false);
+
+        const handleChange = event => {
+            const { name, value } = event.target;
+            setFeedback({ ...feedback, [name]: value });
+        };
+
+        const saveFeedback = () => {
+            var data = {
+                fullname: feedback.fullname,
+                email: feedback.email,
+                phone: feedback.phone,
+                message: feedback.message
+            };
+
+            FeedbackDataService.create(data)
+                .then(response => {
+                    setFeedback({
+                        id: response.data.id,
+                        fullname: response.data.fullname,
+                        email: response.data.email,
+                        phone: response.data.phone,
+                        message: response.data.message
+                    });
+                    setSubitted(true);
+                    console.log(response.data);
+                })
+                .catch(e => {
+                    console.log(e);
+                });
+        };
+
+        const newFeedback = () => {
+            setFeedback(initialFeedbackState);
+            setSubitted(false);
+        };
+    };
     return (
         <div className='contact-content'>
             <Container>
@@ -21,12 +69,12 @@ export default function Contact() {
                         <form action='' method=''>
                             <h5>Feedback Form</h5>
 
-                            <TextField id="standard-basic" label="Full Name" variant="standard" className='input' />
-                            <TextField id="standard-basic" label="E-mail" variant="standard" className='input' />
-                            <TextField id="standard-basic" label="Phone" variant="standard" className='input' />
-                            <TextField id="standard-basic" label="Message" variant="standard" className='input' />
+                            <TextField id="standard-basic" label="Full Name" variant="standard" className='input' type="text" value={feedback.fullname} onchange={handleChange} name="fullname" />
+                            <TextField id="standard-basic" label="E-mail" variant="standard" className='input' type="text" value={feedback.email} onChange={handeChange} name="email" />
+                            <TextField id="standard-basic" label="Phone" variant="standard" className='input' type="text" value={feedback.phone} onChange={handeChange} name="phone" />
+                            <TextField id="standard-basic" label="Message" variant="standard" className='input' type="text" value={feedback.message} onChange={handeChange} name="message" />
 
-                            <button type='submit' className='submit-btn'>Send message</button>
+                            <button type='submit' className='submit-btn' onClick={saveFeedback}>Send message</button>
                         </form>
                     </Col>
                 </Row>
@@ -56,6 +104,11 @@ export default function Contact() {
                     </Row>
                 </Container>
             </div>
+            {/* {submitted? (
+                <div>
+                    <h2>Feedback submitted successfully!</h2>
+                </div>
+            )} */}
         </div>
     );
 }

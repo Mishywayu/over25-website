@@ -11,15 +11,15 @@ body{
 
 nav{
     background: whitesmoke;
-    height: 80px;
+    height: 70px;
     width: 100%;
 }
 .logo{
     color: black;
     font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+    line-height: 50px;
+    padding: 0 130px;
+    font-weight: 100;
 }
 nav ul{
     float: right;
@@ -27,12 +27,12 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 60px;
     margin: 0 5px;
     padding: 7px 13px;
     border-radius: 3px;
     color: black;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
 }
 nav ul li:hover{
